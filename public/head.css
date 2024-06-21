@@ -1,0 +1,12 @@
+.head{
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    background-color: aquamarine;
+    /*vertical-align: middle;*/
+}
+.ico{
+    height: 64px;
+    width: 64px;
+    border: none;
+}

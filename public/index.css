@@ -1,0 +1,75 @@
+.head{
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    background-color: aquamarine;
+    /*vertical-align: middle;*/
+}
+.ico{
+    height: 64px;
+    width: 64px;
+    border: none;
+}
+.main{
+    background-color: azure;
+}
+body{
+    font-family: "Harmony OS font";
+}
+.zj-main{
+    background-color: azure;
+}
+.zj-256{
+    transition-duration:0.5s;
+    border-radius: 10%;
+    height: 256px;
+    width: 256px;
+    background-color: white;
+    box-shadow: 10%;
+    transition-timing-function:easeInOutQuart;
+}
+.zj1-num{
+    background-color: grey;
+}
+.zj2-num{
+    background-color: grey;
+}
+.zj-256:hover{
+    border-radius: 10%;
+    height: 256px;
+    width: 256px;
+    background-color: darkgrey;
+    box-shadow: 10%;
+    transition-duration:0.5s;
+    transition-timing-function:easeInOutQuart;
+}
+.classic_button{
+    text-align: center;
+    border-radius: 5px;
+    border: 0px;
+    /*动画过渡*/
+    transition-timing-function:easeInOutQuart;
+    transition-duration:0.2s;
+    /*动画*/
+    background-color: skyblue;
+}
+.classic_button:hover{
+    text-align: center;
+    border-radius: 5px;
+    border: 0px;
+    /*动画过渡*/
+    transition-timing-function:easeInOutQuart;
+    transition-duration:0.5s;
+    /*动画*/
+    background-color: grey;
+}
+.classic_button:active{
+    text-align: center;
+    border-radius: 5px;
+    border: 0px;
+    /*动画过渡*/
+    transition-timing-function:easeInOutQuart;
+    transition-duration:0.2s;
+    /*动画*/
+    background-color: plum;
+}

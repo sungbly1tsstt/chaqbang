@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <link href="public/head.css" rel="stylesheet">
+    <link href="public/font.css" rel="stylesheet">
+    <link href="index/index.css" rel="stylesheet">
+    <script src="public/jquery-3.5.1.min.js"></script>
+    <script src="index/index.js"></script>
+    <script src="public/st cookie.js"></script>
+    <title>查绑定</title>
+</head>
+<body>
+    <div class="head">
+        <iframe src="public/head.html" style="border: 0px;width: 100%;"></iframe>
+    </div>
+        <dialog id="unsupport" style="border-radius: 10px;border: 0px;box-shadow: 12px 12px 2px 1px rgba(56, 56, 56, 0.2);">
+            <form method="dialog">
+                <p style="text-align: right;"><button style="font-family: ICON;height: 32px;width: 32px;border-radius:10px"></button></p>
+                <h1 style="text-align: center;">你的游览器可能不支持让这个网页正常工作</h1>
+                <p style="text-align: center;">请不要使用IE Safari访问该网页</p>
+                <p style="text-align: center;"><button style="font-family: ICON;height: 32px;border-radius:10px;border: 0px;background-color: aqua;">关闭</button></p>
+            </form>
+        </dialog>
+        <script>
+            function showUnsupport(){//显示不支持调用
+                document.getElementById("unsupport").showModal();
+            }
+        </script>
+        <div style="background-color: aquamarine;">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    <div class="main">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="classic_button" onclick="change('qq查手机')">&nbsp;qq查手机&nbsp;</div>
+                    </td>
+                    <td>
+                        <div class="classic_button" onclick="change('手机查qq')">&nbsp;手机查qq&nbsp;</div>
+                    </td>
+                    <td>
+                        <div class="classic_button" onclick="change('qq查老密')">&nbsp;qq查老密&nbsp;</div>
+                    </td>
+                    <td>
+                        <div class="classic_button" onclick="change('qq查LOL')">&nbsp;qq查LOL&nbsp;</div>
+                    </td>
+                    <td>
+                        <div class="classic_button" onclick="change('LOL查qq')">&nbsp;LOL查qq&nbsp;</div>
+                    </td>
+                    <td>
+                        <div class="classic_button" onclick="change('微博查手机')">&nbsp;微博查手机&nbsp;</div>
+                    </td>
+                    <td>
+                        <div class="classic_button" onclick="change('手机查微博')">&nbsp;手机查微博&nbsp;</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <dialog id="results" class="results" style="border-radius: 10px;border: 0px;box-shadow: 12px 12px 2px 1px rgba(56, 56, 56, 0.2);">
+            <form method="dialog">
+                <p>查询结果 <button style="font-family: ICON;"></button></p>
+                <p id="results Value"></p>
+            </form> 
+        </dialog>
+        <dialog id="NoChooseType" style="border-radius: 10px;border: 0px;box-shadow: 12px 12px 2px 1px rgba(56, 56, 56, 0.2);">
+            <from method="dialog">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="color: red;"><p>错误</p></td>
+                            <td style="text-align: left;"><button style="font-family: ICON;" onclick="document.getElementById('NoChooseType').close();"></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <p>请先选择查询类型</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="classic_button" onclick="change('qq查手机')">&nbsp;qq查手机&nbsp;</div>
+                            </td>
+                            <td>
+                                <div class="classic_button" onclick="change('手机查qq')">&nbsp;手机查qq&nbsp;</div>
+                            </td>
+                            <td>
+                                <div class="classic_button" onclick="change('qq查老密')">&nbsp;qq查老密&nbsp;</div>
+                            </td>
+                            <td>
+                                <div class="classic_button" onclick="change('qq查LOL')">&nbsp;qq查LOL&nbsp;</div>
+                            </td>
+                            <td>
+                                <div class="classic_button" onclick="change('LOL查qq')">&nbsp;LOL查qq&nbsp;</div>
+                            </td>
+                            <td>
+                                <div class="classic_button" onclick="change('微博查手机')">&nbsp;微博查手机&nbsp;</div>
+                            </td>
+                            <td>
+                                <div class="classic_button" onclick="change('手机查微博')">&nbsp;手机查微博&nbsp;</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="classic_button" onclick="document.getElementById('NoChooseType').close();">关闭</div>
+            </form> 
+        </dialog>
+        <h1 id="type">请点击上面的按钮以继续</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <input placeholder="输入账号..." id="account" size="100">
+                    </td>
+                    <td>
+                        <div class="classic_button" onclick="query()">&nbsp;查询&nbsp;</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>历史结果</h1>
+        <div id="histroy">
+        </div>
+    </div>
+    <script>
+        init();
+    </script>
+</body>
